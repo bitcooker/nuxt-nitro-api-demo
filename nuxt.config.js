@@ -1,5 +1,5 @@
 export default {
   target: "static",
 
-  buildModules: ["@nuxt/nitro/compat"],
+  buildModules: ["@nuxtjs/tailwindcss", "@nuxt/nitro/compat"],
 };
