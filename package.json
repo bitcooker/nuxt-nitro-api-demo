@@ -1,0 +1,16 @@
+{
+  "name": "nuxt-nitro-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "nuxt generate",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "start": "node .out/server"
+  },
+  "dependencies": {
+    "@nuxt/nitro": "^0.1.11",
+    "nuxt": "^2.15.2"
+  }
+}

@@ -1,0 +1,8 @@
+node_modules
+.nuxt
+dist
+*.log*
+.vercel
+.netlify
+.vercel_build_output
+.output
