@@ -1,4 +1,4 @@
-mame = "nuxt-nitro-demo"
+name = "nuxt-nitro-demo"
 type = "javascript"
 account_id = "a31a2463437209f811d4a205cf52ff27"
 workers_dev = true
