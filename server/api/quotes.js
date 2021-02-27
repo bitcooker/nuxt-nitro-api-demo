@@ -1,4 +1,4 @@
-import { useQuery} from 'h3'
+import { useQuery } from "h3";
 
 const quotes = [
   {
@@ -487,9 +487,15 @@ function paginator(items, current_page, per_page_items) {
 }
 
 export default (req) => {
-  let { page } = useQuery(req)
+  let { page } = useQuery(req);
 
   page = page ? parseInt(page) : 1;
 
-  return paginator(quotes, page, 4);
+  return {
+    ...paginator(quotes, page, 4),
+    info: {
+      url: req.url,
+      query: useQuery(req),
+    },
+  };
 };
