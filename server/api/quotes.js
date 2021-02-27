@@ -493,9 +493,10 @@ export default (req) => {
 
   return {
     ...paginator(quotes, page, 4),
-    info: {
+    request: {
       url: req.url,
       query: useQuery(req),
+      object: req,
     },
   };
 };
