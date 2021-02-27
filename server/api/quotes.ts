@@ -1,4 +1,5 @@
 import { useQuery } from "h3";
+import { IncomingMessage } from "http";
 
 const quotes = [
   {
@@ -486,17 +487,20 @@ function paginator(items, current_page, per_page_items) {
   };
 }
 
-export default (req) => {
-  let { page } = useQuery(req);
+export default (req : IncomingMessage) => {
+  let query = useQuery(req);
 
-  page = page ? parseInt(page) : 1;
+  /** @ts-ignore */
+  let page = query.page ? parseInt(query.page) : 1;
 
   return {
     ...paginator(quotes, page, 4),
     request: {
       url: req.url,
-      query: useQuery(req),
-      object: req,
+      method: req.method,
+      headers: req.headers,
+      trailers: req.trailers,
+      query: query,
     },
   };
 };
