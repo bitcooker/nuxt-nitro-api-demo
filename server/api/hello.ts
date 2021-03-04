@@ -7,8 +7,6 @@ export default (req) => {
     request: {
       url: req.url,
       method: req.method,
-      headers: req.headers,
-      trailers: req.trailers,
       query: useQuery(req),
     },
   };
