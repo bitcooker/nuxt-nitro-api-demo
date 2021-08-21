@@ -9,8 +9,10 @@
     "start": "node .out/server"
   },
   "dependencies": {
-    "@nuxt/nitro": "^0.3.0",
-    "nuxt-edge": "^2.16.0-26965461.9212d34e"
+    "@nuxt/nitro": "^0.9.1",
+    "@nuxtjs/composition-api": "^0.27.0",
+    "nuxt-edge": "^2.16.0-26965461.9212d34e",
+    "vue2-script-setup-transform": "^0.2.0"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^4.0.3",
